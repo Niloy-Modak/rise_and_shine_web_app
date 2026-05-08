@@ -122,7 +122,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[55] bg-black/15 backdrop-blur-[14px] hidden lg:block"
+            className="fixed inset-0 z-55 bg-black/15 backdrop-blur-[14px] hidden lg:block"
           />
         )}
       </AnimatePresence>
@@ -241,7 +241,7 @@ export default function Navbar() {
                     className="flex gap-12"
                   >
                     {/* Left Link Side */}
-                    <div className="flex flex-col gap-4 min-w-[200px]">
+                    <div className="flex flex-col gap-4 min-w-50">
                       <div className="text-[10px] uppercase font-bold text-gray-400 mb-2 tracking-widest">
                         Explore {hoveredItem}
                       </div>
@@ -263,9 +263,9 @@ export default function Navbar() {
                     {/* Right Image Side with Zoom Animation */}
                     <motion.div
                       whileHover="hoverState"
-                      className="w-[340px] relative cursor-pointer group"
+                      className="w-85 relative cursor-pointer group"
                     >
-                      <div className="h-[260px] rounded-[32px] overflow-hidden relative shadow-lg bg-zinc-100">
+                      <div className="h-65 rounded-32 overflow-hidden relative shadow-lg bg-zinc-100">
                         <motion.div
                           variants={{ hoverState: { scale: 1.05 } }} // Reduced from 1.1 so it doesn't jump aggressively
                           transition={{
@@ -307,7 +307,7 @@ export default function Navbar() {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }} // Slightly faster mobile open
-            className="fixed inset-0 z-[70] bg-[#1A1A1C] text-white flex flex-col px-7 pt-8 pb-10 lg:hidden"
+            className="fixed inset-0 z-70 bg-[#1A1A1C] text-white flex flex-col px-7 pt-8 pb-10 lg:hidden"
           >
             <div className="flex justify-between items-center mb-10">
               <span className="text-xl font-bold tracking-tighter">
@@ -348,7 +348,7 @@ export default function Navbar() {
                     )}
                   </div>
 
-                  {/* Mobile Sublinks Drawer */}
+                  {/* Mobile Sub links Drawer */}
                   <AnimatePresence>
                     {link.hasPlus && mobileExpandedItem === link.name && (
                       <motion.div
