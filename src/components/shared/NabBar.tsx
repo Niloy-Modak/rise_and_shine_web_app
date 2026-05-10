@@ -64,6 +64,7 @@ export default function Navbar() {
   const [showTopBar, setShowTopBar] = useState(true);
   const [hidden, setHidden] = useState(false);
   const [isPill, setIsPill] = useState(false);
+  const [colored, setColored] = useState(false);
 
   // Interaction States
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
@@ -88,14 +89,17 @@ export default function Navbar() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
 
-    // Show/Hide Top Promotion Bar
+    // 1. Show/Hide Top Promotion Bar
     setShowTopBar(latest <= 50);
 
-    // Pill mode and Navbar visibility
+    // 2. Handle Color & Pill Mode
     if (latest <= 100) {
       setIsPill(false);
       setHidden(false);
+      setColored(false);
     } else {
+      setColored(true); // Text should be BLACK
+      setHidden(true);
       if (latest > previous && latest > 200) {
         setHidden(true); // Scrolling down: Hide
         setHoveredItem(null);
@@ -161,7 +165,7 @@ export default function Navbar() {
             <Link
               href="/"
               className={`text-xl lg:text-2xl font-bold tracking-tighter transition-colors duration-300 ${
-                isPill || !showTopBar ? "text-black" : "text-white"
+                colored ? "text-black" : "text-white"
               }`}
             >
               Rise at Seven
@@ -171,7 +175,7 @@ export default function Navbar() {
             {/* Desktop Menu Links */}
             <div
               className={`hidden lg:flex items-center gap-x-8 text-[12px] font-bold uppercase tracking-widest transition-colors duration-300 ${
-                isPill || !showTopBar ? "text-black/80" : "text-white"
+                colored ? "text-black/80" : "text-white"
               }`}
             >
               {NAV_LINKS.map((link) => (
@@ -214,7 +218,9 @@ export default function Navbar() {
               </button>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className={`lg:hidden p-2 transition-colors ${isPill || !showTopBar ? "text-black" : "text-white"}`}
+                className={`lg:hidden p-2 transition-colors ${
+                  colored ? "text-black" : "text-white"
+                }`}
               >
                 <Menu size={32} strokeWidth={1.5} />
               </button>
