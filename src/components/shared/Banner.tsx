@@ -172,7 +172,7 @@ export default function HeroBanner() {
         </motion.div>
 
         {/* BOTTOM FOOTER TEXT */}
-        <div className="absolute bottom-6 md:bottom-8 w-full px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-end text-[8px] md:text-[10px] text-white/50 font-bold uppercase tracking-[0.1em] md:tracking-[0.2em] z-20 gap-3 md:gap-4">
+        <div className="absolute bottom-6 md:bottom-8 w-full px-6 md:px-12 flex flex-col md:flex-row justify-between items-center md:items-end text-[8px] md:text-[10px] text-white/50 font-bold uppercase tracking-widest md:tracking-[0.2em] z-20 gap-3 md:gap-4">
           <div className="max-w-75 text-center md:text-left leading-relaxed">
             Organic media planners creating, <br className="hidden md:block" />
             distributing & optimising search-first content
