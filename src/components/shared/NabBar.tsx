@@ -126,7 +126,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-55 bg-black/15 backdrop-blur-[14px] hidden lg:block"
+            className="fixed inset-0 z-55 bg-black/15 backdrop-blur-[14px] hidden lg:block "
           />
         )}
       </AnimatePresence>
@@ -151,11 +151,11 @@ export default function Navbar() {
         </motion.div>
 
         {/* 3. MAIN NAVBAR */}
-        <div className="w-full flex justify-center lg:pt-5 lg:px-4 pointer-events-none">
+        <div className="w-full flex justify-center lg:pt-5 lg:px-4 pointer-events-none ">
           <motion.nav
             layout
             onMouseLeave={() => setHoveredItem(null)}
-            className={`relative flex items-center justify-between w-full pointer-events-auto transition-all duration-500 ease-in-out ${
+            className={`relative  flex items-center justify-between w-full pointer-events-auto transition-all duration-500 ease-in-out ${
               isPill
                 ? " bg-white/75 backdrop-blur-[25px] saturate-180 lg:rounded-full py-2.5 px-8 shadow-[0_10px_40px_rgba(0,0,0,0.08)]  border-white/40"
                 : "bg-transparent py-6 lg:py-5 px-6"
@@ -168,7 +168,7 @@ export default function Navbar() {
                 colored ? "text-black" : "text-white"
               }`}
             >
-              Rise at Seven
+              Rise & Shine
               <span className="text-[10px] align-top ml-0.5">®</span>
             </Link>
 
@@ -317,7 +317,7 @@ export default function Navbar() {
           >
             <div className="flex justify-between items-center mb-10">
               <span className="text-xl font-bold tracking-tighter">
-                Rise at Seven®
+                Rise & Shine®
               </span>
               <button
                 onClick={() => setIsMobileMenuOpen(false)}

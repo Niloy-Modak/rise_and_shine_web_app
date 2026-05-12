@@ -90,7 +90,7 @@ export default function HeroBanner() {
   };
 
   return (
-    <section className="relative h-screen w-full bg-[#BFF7DA] overflow-hidden">
+    <section className="relative h-screen w-full bg-[#BFF7DA] overflow-hidden ">
       {/* THE ANIMATED PANEL - REVEALS EVERY TIME */}
       <section className="rounded-3xl ">
         <motion.div

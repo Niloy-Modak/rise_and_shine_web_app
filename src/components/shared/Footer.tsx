@@ -228,7 +228,7 @@ const Footer = () => {
         {/* Brand Logo Section */}
         <div className="mt-24 border-b border-white/5 pb-6">
           <h1 className="flex items-start text-7xl md:text-8xl lg:text-[15rem] font-black leading-[0.75] tracking-tighter">
-            Rise at SeveN
+            Rise & Shine
             <span className="relative">
               <span className="absolute -top-[1vw] right-[-3vw] text-[3vw] font-bold">
                 ®
@@ -240,7 +240,7 @@ const Footer = () => {
         {/* Footer Bottom Bar */}
         <div className="mt-8 flex flex-col gap-6 text-[10px] text-white/40 md:flex-row md:justify-between md:text-[11px] font-medium uppercase tracking-widest">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span>© {currentYear} Rise at Seven Ltd. All rights reserved</span>
+            <span>© {currentYear} Rise & Shine Ltd. All rights reserved</span>
             <span className="opacity-20">•</span>
             <span>Company Number 11955187</span>
             <span className="opacity-20">•</span>

@@ -5,8 +5,9 @@ import FeaturedWork from "@/components/shared/FeaturedWork";
 import PrimeButton from "@/components/ui/PrimeButton";
 import ServicesSection from "@/components/shared/ServicesSection";
 import CustomersHeadlineSection from "@/components/shared/CustomersHeadlineSection";
-
-
+import WhatsNewSection from "@/components/shared/WhatsNewSection";
+import ScrollingTextSection from "@/components/shared/ScrollingTextSection";
+import StackedSection from "@/components/shared/StackedSection";
 
 export default function Home() {
   return <div className="">
@@ -20,9 +21,11 @@ export default function Home() {
     </div>
  
     <ServicesSection/>
+    
     <CustomersHeadlineSection/>
-    {/* <div className="h-322">
+    <StackedSection/>
+    <WhatsNewSection/>
 
-    </div> */}
+    <ScrollingTextSection/>
   </div>;
 }
